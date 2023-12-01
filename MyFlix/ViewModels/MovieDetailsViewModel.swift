@@ -8,9 +8,9 @@
 import Foundation
 
 class MovieDetailsViewModel: ObservableObject {
-  private let httpService: HttpService
+  private let httpService: HttpServiceInterface
 
-  init(httpService: HttpService) {
+  init(httpService: HttpServiceInterface) {
     self.httpService = httpService
   }
 

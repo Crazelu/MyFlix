@@ -11,9 +11,13 @@ import CoreData
 class WatchListViewModel: ObservableObject {
   let container: NSPersistentContainer
 
-  init() {
+  init(persistentStoreDescriptions: [NSPersistentStoreDescription] = []) {
     container = NSPersistentContainer(name: "MoviesContainer")
+    if !persistentStoreDescriptions.isEmpty {
+      container.persistentStoreDescriptions = persistentStoreDescriptions
+    }
     container.loadPersistentStores { _, _ in }
+
     getWatchlist()
   }
 
@@ -60,14 +64,8 @@ class WatchListViewModel: ObservableObject {
   }
 
   func findMovieById(id: Int) -> MovieEntity? {
-    let request = NSFetchRequest<MovieEntity>(entityName: "MovieEntity")
-
-    request.predicate = NSPredicate(format: "id LIKE %@", "\(id)")
-
-    do {
-      return try container.viewContext.fetch(request).first
-    } catch {
-      return nil
+    return savedMovies.first { movieEntity in
+      Int(movieEntity.id) == id
     }
   }
 }

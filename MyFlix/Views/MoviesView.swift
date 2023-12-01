@@ -27,6 +27,7 @@ struct MoviesView: View {
                 text: "Failed to fetch movies",
                 proxy: proxy
               )
+
               Button {
                 Task {
                   await moviesVM.getMovies()
@@ -67,6 +68,7 @@ struct MoviesView: View {
               }
             }
             .navigationBarTitleDisplayMode(.inline)
+            .accessibilityIdentifier("moviesScrollView")
           }
         }
         .foregroundColor(Color.white)

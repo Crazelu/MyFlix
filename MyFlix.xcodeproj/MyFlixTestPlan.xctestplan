@@ -1,0 +1,35 @@
+{
+  "configurations" : [
+    {
+      "id" : "FBE27645-FD3B-461D-BDEB-2969DA5F856A",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:MyFlix.xcodeproj",
+      "identifier" : "FF58641F2B15BC400005DBA9",
+      "name" : "MyFlix"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:MyFlix.xcodeproj",
+        "identifier" : "FF05825C2B198A49003F2B31",
+        "name" : "MyFlixTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:MyFlix.xcodeproj",
+        "identifier" : "FF0D1D9F2B1A74910040D91A",
+        "name" : "MyFlixUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

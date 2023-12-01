@@ -9,8 +9,20 @@ import SwiftUI
 
 struct SearchView: View {
   @EnvironmentObject var moviesVM: MoviesViewModel
-  @StateObject var searchVM = SearchViewModel(httpService: HttpService())
+  @StateObject private var searchVM: SearchViewModel
   @State var searchText = ""
+
+  init() {
+    #if DEBUG
+    if UITestingHelper.isUITesting {
+      _searchVM = StateObject(wrappedValue: SearchViewModel(httpService: UITestingHttpServiceMock(shouldThrowError: !UITestingHelper.isNetworkingSuccessful)))
+    } else {
+      _searchVM = StateObject(wrappedValue: SearchViewModel(httpService: HttpService()))
+    }
+    #else
+    _searchVM = StateObject(wrappedValue: SearchViewModel(httpService: HttpService()))
+    #endif
+  }
 
   let columns = [
     GridItem(.flexible()),
@@ -75,6 +87,7 @@ struct SearchView: View {
             }
             .padding(.top, 20)
             .padding(.horizontal, AppConstants.horizontalPadding)
+            .accessibilityIdentifier("searchScrollView")
           }
         }
         .navigationBarTitleDisplayMode(.inline)

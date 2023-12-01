@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "02DEE402-4CF5-414D-8EED-37DD5EF49ADE",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:MyFlix.xcodeproj",
+        "identifier" : "FF05825C2B198A49003F2B31",
+        "name" : "MyFlixTests"
+      }
+    }
+  ],
+  "version" : 1
+}

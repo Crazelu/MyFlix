@@ -9,6 +9,10 @@ import SwiftUI
 
 enum AppConstants {
   static let horizontalPadding: CGFloat = 8
+  static let initialSearchQuery = "christmas"
+  static let uiTesting = "-ui-testing"
+  static let uiTestingNetworkingSuccess = "-ui-testing-networking-success"
+  static let uiTestingNetworkingFailure = "-ui-testing-networking-failure"
 
   enum Colors {
     static let backgroundColor = Color("BackgroundColor")

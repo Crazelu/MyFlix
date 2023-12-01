@@ -8,10 +8,10 @@
 import Foundation
 
 class SearchViewModel: ObservableObject {
-  private let httpService: HttpService
+  private let httpService: HttpServiceInterface
 
 
-  init(httpService: HttpService) {
+  init(httpService: HttpServiceInterface) {
     self.httpService = httpService
     performInitialSearch()
   }
@@ -23,7 +23,7 @@ class SearchViewModel: ObservableObject {
 
   private func performInitialSearch() {
     Task {
-      await search(with: "christmas")
+      await search(with: AppConstants.initialSearchQuery)
     }
   }
 

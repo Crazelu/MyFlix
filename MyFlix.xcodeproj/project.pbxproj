@@ -12,6 +12,14 @@
 		FF0582522B196976003F2B31 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0582512B196976003F2B31 /* Api.swift */; };
 		FF0582542B196C97003F2B31 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FF0582532B196C97003F2B31 /* .gitignore */; };
 		FF0582562B197C54003F2B31 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF0582552B197C54003F2B31 /* Secrets.plist */; };
+		FF0D1D8B2B1A35670040D91A /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D1D8A2B1A35670040D91A /* SearchViewModelTests.swift */; };
+		FF0D1D8E2B1A363F0040D91A /* HttpServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D1D8D2B1A363F0040D91A /* HttpServiceMock.swift */; };
+		FF0D1D902B1A3ED70040D91A /* MovieDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D1D8F2B1A3ED70040D91A /* MovieDetailsViewModelTests.swift */; };
+		FF0D1D922B1A42AE0040D91A /* MoviesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D1D912B1A42AE0040D91A /* MoviesViewModelTests.swift */; };
+		FF0D1D942B1A43530040D91A /* MoviesVMHttpServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D1D932B1A43530040D91A /* MoviesVMHttpServiceMock.swift */; };
+		FF0D1D962B1A4ADC0040D91A /* WatchListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D1D952B1A4ADC0040D91A /* WatchListViewModelTests.swift */; };
+		FF0D1D9B2B1A741A0040D91A /* UITestingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D1D9A2B1A741A0040D91A /* UITestingHelper.swift */; };
+		FF0D1DA32B1A74910040D91A /* MoviesViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D1DA22B1A74910040D91A /* MoviesViewUITests.swift */; };
 		FF5864242B15BC400005DBA9 /* MyFlixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5864232B15BC400005DBA9 /* MyFlixApp.swift */; };
 		FF5864262B15BC400005DBA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5864252B15BC400005DBA9 /* ContentView.swift */; };
 		FF5864282B15BC400005DBA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5864272B15BC400005DBA9 /* Assets.xcassets */; };
@@ -26,6 +34,8 @@
 		FF5864452B15E8AF0005DBA9 /* MovieApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5864442B15E8AF0005DBA9 /* MovieApiResult.swift */; };
 		FF5864472B15F10F0005DBA9 /* MoviesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5864462B15F10F0005DBA9 /* MoviesRowView.swift */; };
 		FF5864492B16B9FF0005DBA9 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5864482B16B9FF0005DBA9 /* MovieDetail.swift */; };
+		FFC1FA1B2B1A817E00E52762 /* SearchViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC1FA1A2B1A817E00E52762 /* SearchViewUITests.swift */; };
+		FFC1FA1D2B1A820700E52762 /* UITestingHttpServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC1FA1C2B1A820700E52762 /* UITestingHttpServiceMock.swift */; };
 		FFE0955D2B1817580048DFB9 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0955C2B1817580048DFB9 /* HttpService.swift */; };
 		FFE0955F2B181D7D0048DFB9 /* WatchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0955E2B181D7D0048DFB9 /* WatchListViewModel.swift */; };
 		FFE095612B181E870048DFB9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE095602B181E870048DFB9 /* SearchViewModel.swift */; };
@@ -35,12 +45,40 @@
 		FFE095722B185D420048DFB9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE095712B185D420048DFB9 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FF0582612B198A49003F2B31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF5864182B15BC400005DBA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF58641F2B15BC400005DBA9;
+			remoteInfo = MyFlix;
+		};
+		FF0D1DA62B1A74910040D91A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF5864182B15BC400005DBA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF58641F2B15BC400005DBA9;
+			remoteInfo = MyFlix;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		FF05824B2B193623003F2B31 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		FF05824D2B1961FD003F2B31 /* FromWatchlistKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromWatchlistKey.swift; sourceTree = "<group>"; };
 		FF0582512B196976003F2B31 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		FF0582532B196C97003F2B31 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FF0582552B197C54003F2B31 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		FF05825D2B198A49003F2B31 /* MyFlixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFlixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF0D1D8A2B1A35670040D91A /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
+		FF0D1D8D2B1A363F0040D91A /* HttpServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpServiceMock.swift; sourceTree = "<group>"; };
+		FF0D1D8F2B1A3ED70040D91A /* MovieDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		FF0D1D912B1A42AE0040D91A /* MoviesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModelTests.swift; sourceTree = "<group>"; };
+		FF0D1D932B1A43530040D91A /* MoviesVMHttpServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesVMHttpServiceMock.swift; sourceTree = "<group>"; };
+		FF0D1D952B1A4ADC0040D91A /* WatchListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewModelTests.swift; sourceTree = "<group>"; };
+		FF0D1D992B1A59F40040D91A /* MyFlixTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = MyFlixTestPlan.xctestplan; path = MyFlix.xcodeproj/MyFlixTestPlan.xctestplan; sourceTree = "<group>"; };
+		FF0D1D9A2B1A741A0040D91A /* UITestingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingHelper.swift; sourceTree = "<group>"; };
+		FF0D1DA02B1A74910040D91A /* MyFlixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFlixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF0D1DA22B1A74910040D91A /* MoviesViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewUITests.swift; sourceTree = "<group>"; };
 		FF5864202B15BC400005DBA9 /* MyFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5864232B15BC400005DBA9 /* MyFlixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFlixApp.swift; sourceTree = "<group>"; };
 		FF5864252B15BC400005DBA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +95,8 @@
 		FF5864462B15F10F0005DBA9 /* MoviesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRowView.swift; sourceTree = "<group>"; };
 		FF5864482B16B9FF0005DBA9 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		FF58644A2B16C3E80005DBA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FFC1FA1A2B1A817E00E52762 /* SearchViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewUITests.swift; sourceTree = "<group>"; };
+		FFC1FA1C2B1A820700E52762 /* UITestingHttpServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingHttpServiceMock.swift; sourceTree = "<group>"; };
 		FFE0955C2B1817580048DFB9 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		FFE0955E2B181D7D0048DFB9 /* WatchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewModel.swift; sourceTree = "<group>"; };
 		FFE095602B181E870048DFB9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -67,6 +107,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FF05825A2B198A49003F2B31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF0D1D9D2B1A74910040D91A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FF58641D2B15BC400005DBA9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,11 +131,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF05825E2B198A49003F2B31 /* MyFlixTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF0D1D8A2B1A35670040D91A /* SearchViewModelTests.swift */,
+				FF0D1D8F2B1A3ED70040D91A /* MovieDetailsViewModelTests.swift */,
+				FF0D1D912B1A42AE0040D91A /* MoviesViewModelTests.swift */,
+				FF0D1D952B1A4ADC0040D91A /* WatchListViewModelTests.swift */,
+			);
+			path = MyFlixTests;
+			sourceTree = "<group>";
+		};
+		FF0D1D8C2B1A36270040D91A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				FF0D1D8D2B1A363F0040D91A /* HttpServiceMock.swift */,
+				FF0D1D932B1A43530040D91A /* MoviesVMHttpServiceMock.swift */,
+				FFC1FA1C2B1A820700E52762 /* UITestingHttpServiceMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		FF0D1DA12B1A74910040D91A /* MyFlixUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF0D1DA22B1A74910040D91A /* MoviesViewUITests.swift */,
+				FFC1FA1A2B1A817E00E52762 /* SearchViewUITests.swift */,
+			);
+			path = MyFlixUITests;
+			sourceTree = "<group>";
+		};
 		FF5864172B15BC400005DBA9 = {
 			isa = PBXGroup;
 			children = (
+				FF0D1D992B1A59F40040D91A /* MyFlixTestPlan.xctestplan */,
 				FF0582532B196C97003F2B31 /* .gitignore */,
 				FF5864222B15BC400005DBA9 /* MyFlix */,
+				FF05825E2B198A49003F2B31 /* MyFlixTests */,
+				FF0D1DA12B1A74910040D91A /* MyFlixUITests */,
 				FF5864212B15BC400005DBA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				FF5864202B15BC400005DBA9 /* MyFlix.app */,
+				FF05825D2B198A49003F2B31 /* MyFlixTests.xctest */,
+				FF0D1DA02B1A74910040D91A /* MyFlixUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,11 +191,11 @@
 				FF58643B2B15C6960005DBA9 /* Utils */,
 				FF5864342B15C4CC0005DBA9 /* Networking */,
 				FF5864332B15C4C60005DBA9 /* Models */,
-				FF5864322B15C4BB0005DBA9 /* Views */,
 				FF5864232B15BC400005DBA9 /* MyFlixApp.swift */,
 				FF5864272B15BC400005DBA9 /* Assets.xcassets */,
 				FF5864292B15BC400005DBA9 /* Preview Content */,
 				FFE0956C2B1841250048DFB9 /* MoviesContainer.xcdatamodeld */,
+				FF5864322B15C4BB0005DBA9 /* Views */,
 				FFE095712B185D420048DFB9 /* Launch Screen.storyboard */,
 				FF0582552B197C54003F2B31 /* Secrets.plist */,
 			);
@@ -150,6 +239,7 @@
 		FF5864342B15C4CC0005DBA9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				FF0D1D8C2B1A36270040D91A /* Mocks */,
 				FFE0955C2B1817580048DFB9 /* HttpService.swift */,
 			);
 			path = Networking;
@@ -160,6 +250,7 @@
 			children = (
 				FF58643C2B15C82E0005DBA9 /* AppConstants.swift */,
 				FFE095622B1825600048DFB9 /* Debouncer.swift */,
+				FF0D1D9A2B1A741A0040D91A /* UITestingHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -178,6 +269,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FF05825C2B198A49003F2B31 /* MyFlixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF0582632B198A49003F2B31 /* Build configuration list for PBXNativeTarget "MyFlixTests" */;
+			buildPhases = (
+				FF0582592B198A49003F2B31 /* Sources */,
+				FF05825A2B198A49003F2B31 /* Frameworks */,
+				FF05825B2B198A49003F2B31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF0582622B198A49003F2B31 /* PBXTargetDependency */,
+			);
+			name = MyFlixTests;
+			productName = MyFlixTests;
+			productReference = FF05825D2B198A49003F2B31 /* MyFlixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF0D1D9F2B1A74910040D91A /* MyFlixUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF0D1DA82B1A74910040D91A /* Build configuration list for PBXNativeTarget "MyFlixUITests" */;
+			buildPhases = (
+				FF0D1D9C2B1A74910040D91A /* Sources */,
+				FF0D1D9D2B1A74910040D91A /* Frameworks */,
+				FF0D1D9E2B1A74910040D91A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF0D1DA72B1A74910040D91A /* PBXTargetDependency */,
+			);
+			name = MyFlixUITests;
+			productName = MyFlixUITests;
+			productReference = FF0D1DA02B1A74910040D91A /* MyFlixUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		FF58641F2B15BC400005DBA9 /* MyFlix */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF58642E2B15BC400005DBA9 /* Build configuration list for PBXNativeTarget "MyFlix" */;
@@ -206,6 +333,14 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					FF05825C2B198A49003F2B31 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = FF58641F2B15BC400005DBA9;
+					};
+					FF0D1D9F2B1A74910040D91A = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = FF58641F2B15BC400005DBA9;
+					};
 					FF58641F2B15BC400005DBA9 = {
 						CreatedOnToolsVersion = 14.1;
 					};
@@ -225,11 +360,27 @@
 			projectRoot = "";
 			targets = (
 				FF58641F2B15BC400005DBA9 /* MyFlix */,
+				FF05825C2B198A49003F2B31 /* MyFlixTests */,
+				FF0D1D9F2B1A74910040D91A /* MyFlixUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FF05825B2B198A49003F2B31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF0D1D9E2B1A74910040D91A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FF58641E2B15BC400005DBA9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,19 +418,43 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FF0582592B198A49003F2B31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF0D1D962B1A4ADC0040D91A /* WatchListViewModelTests.swift in Sources */,
+				FF0D1D8B2B1A35670040D91A /* SearchViewModelTests.swift in Sources */,
+				FF0D1D902B1A3ED70040D91A /* MovieDetailsViewModelTests.swift in Sources */,
+				FF0D1D922B1A42AE0040D91A /* MoviesViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF0D1D9C2B1A74910040D91A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFC1FA1B2B1A817E00E52762 /* SearchViewUITests.swift in Sources */,
+				FF0D1DA32B1A74910040D91A /* MoviesViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FF58641C2B15BC400005DBA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF0D1D8E2B1A363F0040D91A /* HttpServiceMock.swift in Sources */,
 				FF5864382B15C6450005DBA9 /* SearchView.swift in Sources */,
 				FF05824E2B1961FD003F2B31 /* FromWatchlistKey.swift in Sources */,
 				FFE095632B1825600048DFB9 /* Debouncer.swift in Sources */,
+				FF0D1D9B2B1A741A0040D91A /* UITestingHelper.swift in Sources */,
 				FFE0955D2B1817580048DFB9 /* HttpService.swift in Sources */,
 				FF58643D2B15C82E0005DBA9 /* AppConstants.swift in Sources */,
 				FF5864472B15F10F0005DBA9 /* MoviesRowView.swift in Sources */,
+				FFC1FA1D2B1A820700E52762 /* UITestingHttpServiceMock.swift in Sources */,
 				FFE095652B18343D0048DFB9 /* EmptyStateView.swift in Sources */,
 				FF5864432B15E2660005DBA9 /* MoviesViewModel.swift in Sources */,
 				FF05824C2B193623003F2B31 /* MovieDetailsViewModel.swift in Sources */,
+				FF0D1D942B1A43530040D91A /* MoviesVMHttpServiceMock.swift in Sources */,
 				FF5864452B15E8AF0005DBA9 /* MovieApiResult.swift in Sources */,
 				FFE095612B181E870048DFB9 /* SearchViewModel.swift in Sources */,
 				FFE0955F2B181D7D0048DFB9 /* WatchListViewModel.swift in Sources */,
@@ -297,7 +472,90 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FF0582622B198A49003F2B31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF58641F2B15BC400005DBA9 /* MyFlix */;
+			targetProxy = FF0582612B198A49003F2B31 /* PBXContainerItemProxy */;
+		};
+		FF0D1DA72B1A74910040D91A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF58641F2B15BC400005DBA9 /* MyFlix */;
+			targetProxy = FF0D1DA62B1A74910040D91A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		FF0582642B198A49003F2B31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A83BPKB32J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devcrazelu.MyFlixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFlix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyFlix";
+			};
+			name = Debug;
+		};
+		FF0582652B198A49003F2B31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A83BPKB32J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devcrazelu.MyFlixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFlix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyFlix";
+			};
+			name = Release;
+		};
+		FF0D1DA92B1A74910040D91A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A83BPKB32J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devcrazelu.MyFlixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyFlix;
+			};
+			name = Debug;
+		};
+		FF0D1DAA2B1A74910040D91A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A83BPKB32J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devcrazelu.MyFlixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyFlix;
+			};
+			name = Release;
+		};
 		FF58642C2B15BC400005DBA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -477,6 +735,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FF0582632B198A49003F2B31 /* Build configuration list for PBXNativeTarget "MyFlixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF0582642B198A49003F2B31 /* Debug */,
+				FF0582652B198A49003F2B31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF0D1DA82B1A74910040D91A /* Build configuration list for PBXNativeTarget "MyFlixUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF0D1DA92B1A74910040D91A /* Debug */,
+				FF0D1DAA2B1A74910040D91A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FF58641B2B15BC400005DBA9 /* Build configuration list for PBXProject "MyFlix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
