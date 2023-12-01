@@ -12,7 +12,7 @@ An iOS app for movie discovery using [TMDB's](https://www.themoviedb.org/) APIs.
 
 ## Getting Started 🏗️
 
-To build this app successfully, you need to take the following steps after cloning the project:
+To build and run this app successfully, you need to take the following steps after cloning the project:
 
 - Open the project in Xcode
 - Create a `Secrets.plist` file
@@ -28,8 +28,8 @@ To build this app successfully, you need to take the following steps after cloni
 - You're all set 🎉🎉🎉
 
 ## Screenshots 📷
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/loading.png" width="280"> 
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/home.png" width="280"> 
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/details.png" width="280"> 
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/watchlist.png" width="280"> 
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/search.png" width="280"> 
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/loading.png"  width="270" height="600"> 
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/home.png"  width="270" height="600"> 
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/details.png"  width="270" height="600"> 
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/watchlist.png"  width="270" height="600"> 
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/search.png"  width="270" height="600"> 
