@@ -29,6 +29,10 @@ To build and run this app successfully, you need to take the following steps aft
 
 ## Demo 🎥👾
 
+
+https://github.com/Crazelu/MyFlix/assets/58946834/5df9a150-6f66-471e-b5ae-41b31ec1b9e4
+
+
 ## Screenshots 📷
 <p float="left">
 <img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/loading.png"  width="32.5%"> 
