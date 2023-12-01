@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MyFlixApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
+        .environmentObject(MoviesViewModel())
+        .environmentObject(WatchListViewModel())
     }
+  }
 }
