@@ -28,8 +28,12 @@ To build and run this app successfully, you need to take the following steps aft
 - You're all set 🎉🎉🎉
 
 ## Screenshots 📷
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/loading.png"  width="270" height="600"> 
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/home.png"  width="270" height="600"> 
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/details.png"  width="270" height="600"> 
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/watchlist.png"  width="270" height="600"> 
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/search.png"  width="270" height="600"> 
+<p float="left">
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/loading.png"  width="33%"> 
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/home.png"  width="33%"> 
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/details.png"  width="33%"> 
+</p>
+<p float="left">
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/watchlist.png"  width="33%"> 
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/search.png"  width="33%">
+</p> 
