@@ -27,13 +27,15 @@ To build and run this app successfully, you need to take the following steps aft
     - Paste the access token you copied as the value of this key
 - You're all set 🎉🎉🎉
 
+## Demo 🎥👾
+
 ## Screenshots 📷
 <p float="left">
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/loading.png"  width="33%"> 
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/home.png"  width="33%"> 
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/details.png"  width="33%"> 
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/loading.png"  width="32.5%"> 
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/home.png"  width="32.5%"> 
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/details.png"  width="32.5%"> 
 </p>
 <p float="left">
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/watchlist.png"  width="33%"> 
-<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/search.png"  width="33%">
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/watchlist.png"  width="32.5%"> 
+<img src="https://raw.githubusercontent.com/Crazelu/myflix/main/screenshots/search.png"  width="32.5%">
 </p> 
