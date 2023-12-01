@@ -117,25 +117,24 @@ struct DetailsSubView: View {
       .frame(maxHeight: proxy.size.height * 0.35)
       .onAppear {
         Task {
-          DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            withAnimation(.spring()) {
-              animateTitle = true
-            }
+          try await Task.sleep(for: .milliseconds(100))
+          withAnimation(.spring()) {
+            animateTitle = true
           }
-          DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            withAnimation(.spring()) {
-              animateTextRow = true
-            }
+
+          try await Task.sleep(for: .milliseconds(100))
+          withAnimation(.spring()) {
+            animateTextRow = true
           }
-          DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            withAnimation(.spring()) {
-              animateOverview = true
-            }
+
+          try await Task.sleep(for: .milliseconds(100))
+          withAnimation(.spring()) {
+            animateOverview = true
           }
-          DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-            withAnimation(.spring()) {
-              animateGrid = true
-            }
+
+          try await Task.sleep(for: .milliseconds(100))
+          withAnimation(.spring()) {
+            animateGrid = true
           }
         }
       }
