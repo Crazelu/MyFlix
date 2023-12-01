@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchView: View {
   @EnvironmentObject var moviesVM: MoviesViewModel
-  @StateObject var searchVM = SearchViewModel()
+  @StateObject var searchVM = SearchViewModel(httpService: HttpService())
   @State var searchText = ""
 
   let columns = [
@@ -30,6 +30,7 @@ struct SearchView: View {
 
   var body: some View {
     NavigationStack {
+      // swiftlint:disable:next trailing_closure
       GeometryReader { proxy in
         ZStack {
           AppConstants.Colors.backgroundColor.ignoresSafeArea()
@@ -38,13 +39,19 @@ struct SearchView: View {
               .controlSize(.large)
               .tint(.accentColor)
           }
-          if searchVM.hasEmptyResult {
+          if !searchVM.hasError && searchVM.hasEmptyResult {
             EmptyStateView(
               text: "No movie found for '\(searchText)'",
               proxy: proxy
             )
           }
-          if !searchVM.loading && searchVM.movies.isEmpty && !searchVM.hasEmptyResult {
+          if searchVM.hasError {
+            EmptyStateView(
+              text: "Something went wrong",
+              proxy: proxy
+            )
+          }
+          if !searchVM.hasError && !searchVM.loading && searchVM.movies.isEmpty && !searchVM.hasEmptyResult {
             EmptyStateView(
               text: "Let's find you a movie!",
               proxy: proxy,
@@ -112,7 +119,7 @@ struct CustomSearchBar: View {
 }
 
 struct SearchView_Previews: PreviewProvider {
-  static let moviesVM = MoviesViewModel()
+  static let moviesVM = MoviesViewModel(httpService: HttpService())
   static var previews: some View {
     SearchView()
       .environmentObject(moviesVM)

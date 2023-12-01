@@ -8,12 +8,10 @@
 import Foundation
 
 class MovieDetailsViewModel: ObservableObject {
-  private let httpService: HttpService<MovieDetail>
-  private let similarMoviesHttpService: HttpService<MovieApiResult>
+  private let httpService: HttpService
 
-  init() {
-    httpService = HttpService<MovieDetail>()
-    similarMoviesHttpService = HttpService<MovieApiResult>()
+  init(httpService: HttpService) {
+    self.httpService = httpService
   }
 
   @Published var detail: MovieDetail?
@@ -48,7 +46,7 @@ class MovieDetailsViewModel: ObservableObject {
 
       // swiftlint:disable:next force_unwrapping
       let urlString = "\(AppConstants.Urls.movieDetailsUrl!.absoluteString)\(movieId)?language=en-US"
-      let result = try await httpService.makeRequest(for: URL(string: urlString))
+      let result = try await httpService.getMovieDetails(for: URL(string: urlString))
 
       Task { @MainActor in
         detail = result
@@ -66,10 +64,10 @@ class MovieDetailsViewModel: ObservableObject {
       if !similarMovies.isEmpty { return }
       // swiftlint:disable:next force_unwrapping
       let urlString = "\(AppConstants.Urls.similarMoviesUrl!.absoluteString)\(movieId)/similar?language=en-US&page=1"
-      let result = try await similarMoviesHttpService.makeRequest(for: URL(string: urlString))
+      let movies = try await httpService.getMovies(for: URL(string: urlString))
 
       Task { @MainActor in
-        similarMovies = result.movies
+        similarMovies = movies
         similarMovies.shuffle()
       }
     } catch { }

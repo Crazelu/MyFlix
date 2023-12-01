@@ -7,7 +7,12 @@
 
 import Foundation
 
-class HttpService<T: Decodable> {
+protocol HttpServiceInterface {
+  func getMovies(for url: URL?) async throws -> [Movie]
+  func getMovieDetails(for url: URL?) async throws -> MovieDetail
+}
+
+class HttpService: HttpServiceInterface {
   private let session: URLSession
   private let sessionConfiguration: URLSessionConfiguration
 
@@ -18,13 +23,14 @@ class HttpService<T: Decodable> {
   }
 
   var token: String {
-    guard let url = Bundle.main.url(forResource: "api", withExtension: "json")
+    guard let filePath = Bundle.main.path(forResource: "Secrets", ofType: "plist")
     else { return "" }
 
-    do {
-      let api = try JSONDecoder().decode(Api.self, from: try Data(contentsOf: url))
-      return api.token
-    } catch { return "" }
+    let plist = NSDictionary(contentsOfFile: filePath)
+    guard let value = plist?.object(forKey: "ACCESS_TOKEN") as? String else {
+      return ""
+    }
+    return value
   }
 
   private func getRequest(for url: URL) -> URLRequest {
@@ -34,7 +40,7 @@ class HttpService<T: Decodable> {
     return request
   }
 
-  func makeRequest(for url: URL?) async throws -> T {
+  func getMovies(for url: URL?) async throws -> [Movie] {
     guard let url = url
     else {
       throw HttpRequestError.malformedUrl
@@ -50,7 +56,29 @@ class HttpService<T: Decodable> {
         throw HttpRequestError.invalidResponse
       }
 
-      return try JSONDecoder().decode(T.self, from: data)
+      return try JSONDecoder().decode(MovieApiResult.self, from: data).movies
+    } catch {
+      throw HttpRequestError.requestFailed
+    }
+  }
+
+  func getMovieDetails(for url: URL?) async throws -> MovieDetail {
+    guard let url = url
+    else {
+      throw HttpRequestError.malformedUrl
+    }
+
+    let request = getRequest(for: url)
+
+    do {
+      let (data, response) = try await session.data(for: request)
+
+      guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200
+      else {
+        throw HttpRequestError.invalidResponse
+      }
+
+      return try JSONDecoder().decode(MovieDetail.self, from: data)
     } catch {
       throw HttpRequestError.requestFailed
     }

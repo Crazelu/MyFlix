@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		FF05824C2B193623003F2B31 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05824B2B193623003F2B31 /* MovieDetailsViewModel.swift */; };
 		FF05824E2B1961FD003F2B31 /* FromWatchlistKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05824D2B1961FD003F2B31 /* FromWatchlistKey.swift */; };
-		FF0582502B196918003F2B31 /* api.json in Resources */ = {isa = PBXBuildFile; fileRef = FF05824F2B196918003F2B31 /* api.json */; };
 		FF0582522B196976003F2B31 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0582512B196976003F2B31 /* Api.swift */; };
 		FF0582542B196C97003F2B31 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FF0582532B196C97003F2B31 /* .gitignore */; };
+		FF0582562B197C54003F2B31 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF0582552B197C54003F2B31 /* Secrets.plist */; };
 		FF5864242B15BC400005DBA9 /* MyFlixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5864232B15BC400005DBA9 /* MyFlixApp.swift */; };
 		FF5864262B15BC400005DBA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5864252B15BC400005DBA9 /* ContentView.swift */; };
 		FF5864282B15BC400005DBA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5864272B15BC400005DBA9 /* Assets.xcassets */; };
@@ -38,9 +38,9 @@
 /* Begin PBXFileReference section */
 		FF05824B2B193623003F2B31 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		FF05824D2B1961FD003F2B31 /* FromWatchlistKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromWatchlistKey.swift; sourceTree = "<group>"; };
-		FF05824F2B196918003F2B31 /* api.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = api.json; sourceTree = "<group>"; };
 		FF0582512B196976003F2B31 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		FF0582532B196C97003F2B31 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FF0582552B197C54003F2B31 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		FF5864202B15BC400005DBA9 /* MyFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5864232B15BC400005DBA9 /* MyFlixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFlixApp.swift; sourceTree = "<group>"; };
 		FF5864252B15BC400005DBA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 				FF5864292B15BC400005DBA9 /* Preview Content */,
 				FFE0956C2B1841250048DFB9 /* MoviesContainer.xcdatamodeld */,
 				FFE095712B185D420048DFB9 /* Launch Screen.storyboard */,
-				FF05824F2B196918003F2B31 /* api.json */,
+				FF0582552B197C54003F2B31 /* Secrets.plist */,
 			);
 			path = MyFlix;
 			sourceTree = "<group>";
@@ -236,8 +236,8 @@
 			files = (
 				FF0582542B196C97003F2B31 /* .gitignore in Resources */,
 				FFE095722B185D420048DFB9 /* Launch Screen.storyboard in Resources */,
-				FF0582502B196918003F2B31 /* api.json in Resources */,
 				FF58642B2B15BC400005DBA9 /* Preview Assets.xcassets in Resources */,
+				FF0582562B197C54003F2B31 /* Secrets.plist in Resources */,
 				FF5864282B15BC400005DBA9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,8 +428,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,8 +459,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

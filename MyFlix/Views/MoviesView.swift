@@ -86,6 +86,6 @@ struct MoviesView: View {
 struct HomeView_Previews: PreviewProvider {
   static var previews: some View {
     MoviesView()
-      .environmentObject(MoviesViewModel())
+      .environmentObject(MoviesViewModel(httpService: HttpService()))
   }
 }

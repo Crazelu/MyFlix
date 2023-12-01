@@ -9,10 +9,11 @@ import SwiftUI
 
 @main
 struct MyFlixApp: App {
+  let httpService = HttpService()
   var body: some Scene {
     WindowGroup {
       ContentView()
-        .environmentObject(MoviesViewModel())
+        .environmentObject(MoviesViewModel(httpService: httpService))
         .environmentObject(WatchListViewModel())
     }
   }

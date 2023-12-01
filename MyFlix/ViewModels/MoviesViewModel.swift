@@ -8,10 +8,10 @@
 import SwiftUI
 
 class MoviesViewModel: ObservableObject {
-  private let httpService: HttpService<MovieApiResult>
+  private let httpService: HttpService
 
-  init() {
-    httpService = HttpService<MovieApiResult>()
+  init(httpService: HttpService) {
+    self.httpService = httpService
   }
 
   @Published var upcomingMovies: [Movie] = []
@@ -23,33 +23,33 @@ class MoviesViewModel: ObservableObject {
   var errorCount = 0
 
   private func getUpcomingMovies() async throws {
-    let result = try await httpService.makeRequest(for: AppConstants.Urls.upcomingMoviesUrl)
+    let movies = try await httpService.getMovies(for: AppConstants.Urls.upcomingMoviesUrl)
     Task { @MainActor in
-      upcomingMovies = result.movies
+      upcomingMovies = movies
       upcomingMovies.shuffle()
     }
   }
 
   private func getTopRatedMovies() async throws {
-    let result = try await httpService.makeRequest(for: AppConstants.Urls.topRatedMoviesUrl)
+    let movies = try await httpService.getMovies(for: AppConstants.Urls.topRatedMoviesUrl)
     Task { @MainActor in
-      topRatedMovies = result.movies
+      topRatedMovies = movies
       topRatedMovies.shuffle()
     }
   }
 
   private func getPopularMovies() async throws {
-    let result = try await httpService.makeRequest(for: AppConstants.Urls.popularMoviesUrl)
+    let movies = try await httpService.getMovies(for: AppConstants.Urls.popularMoviesUrl)
     Task { @MainActor in
-      popularMovies = result.movies
+      popularMovies = movies
       popularMovies.shuffle()
     }
   }
 
   private func getTrendingMovies() async throws {
-    let result = try await httpService.makeRequest(for: AppConstants.Urls.trendingMoviesUrl)
+    let movies = try await httpService.getMovies(for: AppConstants.Urls.trendingMoviesUrl)
     Task { @MainActor in
-      trendingMovies = result.movies
+      trendingMovies = movies
       trendingMovies.shuffle()
     }
   }

@@ -8,11 +8,12 @@
 import Foundation
 
 class SearchViewModel: ObservableObject {
-  private let httpService: HttpService<MovieApiResult>
+  private let httpService: HttpService
 
-  init() {
-    httpService = HttpService<MovieApiResult>()
-    self.performInitialSearch()
+
+  init(httpService: HttpService) {
+    self.httpService = httpService
+    performInitialSearch()
   }
 
   @Published var movies: [Movie] = []
@@ -58,9 +59,9 @@ class SearchViewModel: ObservableObject {
       let urlString = AppConstants.Urls.movieSearchUrl!.absoluteString
       + urlSafeQuery + "&include_adult=false&language=en-US&page=1"
 
-      let result = try await httpService.makeRequest(for: URL(string: urlString))
+      let result = try await httpService.getMovies(for: URL(string: urlString))
       Task { @MainActor in
-        movies = result.movies.filter { movie in
+        movies = result.filter { movie in
           movie.posterPath != nil
         }
         hasEmptyResult = movies.isEmpty

@@ -8,7 +8,7 @@
 import SwiftUI
 
 private struct FromWatchlistKey: EnvironmentKey {
-  static let defaultValue: Bool = false
+  static let defaultValue = false
 }
 
 extension EnvironmentValues {

@@ -10,7 +10,7 @@ import SwiftUI
 struct MovieDetailsView: View {
   let movieId: Int
 
-  @StateObject var movieDetailsVM = MovieDetailsViewModel()
+  @StateObject var movieDetailsVM = MovieDetailsViewModel(httpService: HttpService())
 
   var body: some View {
     GeometryReader { proxy in
@@ -81,7 +81,7 @@ struct DetailsSubView: View {
   @Environment(\.presentationMode) private var presentation
   // swiftlint:disable:next attributes
   @Environment(\.fromWatchList) private var fromWatchlist
-  
+
   @EnvironmentObject private var movieDetailsVM: MovieDetailsViewModel
   @EnvironmentObject private var watchlistVM: WatchListViewModel
   @State private var animateGrid = false
@@ -106,15 +106,15 @@ struct DetailsSubView: View {
           .frame(width: proxy.size.width)
           .edgesIgnoringSafeArea(.top)
         Image(systemName: "xmark")
-          .frame(width: 48, height: 48)
+          .frame(width: proxy.size.width * 0.12, height: proxy.size.width * 0.12)
           .background(Color.black.opacity(0.7))
-          .cornerRadius(24)
+          .cornerRadius(proxy.size.width * 0.12)
           .offset(x: proxy.size.width * 0.42, y: -proxy.size.height * 0.12)
           .onTapGesture {
             presentation.wrappedValue.dismiss()
           }
       }
-      .frame(maxHeight: proxy.size.height * 0.29)
+      .frame(maxHeight: proxy.size.height * 0.35)
       .onAppear {
         Task {
           DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -145,7 +145,7 @@ struct DetailsSubView: View {
           Text(detail.title)
             .font(.title.weight(.semibold))
             .padding(.bottom, proxy.size.height * 0.002)
-            .padding(.top, proxy.size.height * 0.015)
+            .padding(.top, proxy.size.height * 0.02)
             .offset(y: animateTitle ? 0 : proxy.size.height)
           HStack {
             Text(detail.releaseDate[...String.Index(utf16Offset: 3, in: detail.releaseDate)])
@@ -206,7 +206,6 @@ struct DetailsSubView: View {
                     .frame(width: proxy.size.width * 0.32)
                     .frame(height: proxy.size.height * 0.28)
                     .cornerRadius(proxy.size.width * 0.02)
-                    .transition(.move(edge: .trailing))
                 }
               }
             }
